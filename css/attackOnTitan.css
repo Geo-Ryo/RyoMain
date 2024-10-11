@@ -1,0 +1,168 @@
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+header{
+    background: #00000075 url(../img/shiganshina.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+header ul{
+    position: absolute;
+    right: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 35%;
+    z-index: 99;
+}
+
+header ul li{
+    list-style: none;
+    text-align: right;
+    
+}
+
+header ul li button{
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family:monospace;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+header ul li button:hover{
+    cursor: pointer;
+    border-bottom: 2px solid #f5f5f5;
+}
+
+.header-image {
+    width: 50%;
+    height: auto;
+    transform: translateX(50%);
+    filter: drop-shadow(0 0 15px rgba(133, 122, 3, 0.555));
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.left-sidebar, .right-sidebar {
+    width: 20%;
+    background-color: #333;
+    padding: 10px;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.video-screen {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+    background-color: #000;
+}
+
+.footer {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.bottom-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #010101;
+}
+
+.poster-image {
+   
+    width: 20vw;
+    width: auto;
+    margin-right: 20px;
+}
+
+.story-text {
+    max-width: 500px;
+}
+
+.dropdown {
+    margin-bottom: 10px;
+}
+
+.dropbtn {
+    width: 100%;
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content button {
+    padding: 10px;
+    background-color: #666;
+    color: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.dropdown-content button:hover {
+    background-color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-sidebar, .right-sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .video-screen {
+        width: 100%;
+    }
+
+    .bottom-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .poster-image {
+        margin-bottom: 20px;
+    }
+}

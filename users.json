@@ -1,0 +1,14 @@
+[
+    {
+        "username": "Ryo",
+        "email": "Ryo@gmail.com",
+        "password": "$2y$10$Ir9HUDRHtPeq8e.7jAgGzOVOd3YWUGDaJKyqWQ0nkUdY5O265CUPK",
+        "profile_picture": "..\/profilePics\/defUser.jpg"
+    },
+    {
+        "username": "lilo",
+        "email": "lilo@gmail.com",
+        "password": "$2y$10$3gDTWI7TjDQ57jJiiRCIvuQj5O5AON2b2pguf9fRqiloh0q7kzPNK",
+        "profile_picture": "..\/profilePics\/67093f50bf647_Screenshot 2024-09-01 211107.png"
+    }
+]

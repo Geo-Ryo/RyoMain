@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies and Anime to Watch</title>
+    <link rel="stylesheet" href="../css/movies.css">
+</head>
+<body>
+    <div class="header">
+        <span class="menu-icon" onclick="toggleSidebar()">&#9776;</span>
+        <h1>Movies and Anime</h1>
+        <div class="nav">
+            <a href="../home.php">Home</a>
+            <a href="#genres" onmouseover="showGenres()" onmouseout="hideGenres()">Genres</a>
+            <a href="#search">Search</a>
+            <a href="#movies">Movies</a>
+            <a href="#tvshows">TV Shows</a>
+            <div class="genres-dropdown" id="genresDropdown">
+                <ul>
+                    <li>Action</li>
+                    <li>Adventure</li>
+                    <li>Comedy</li>
+                    <li>Drama</li>
+                    <li>Horror</li>
+                    <li>Romance</li>
+                    <li>Sci-Fi</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <a href="#home">Home</a>
+        <a href="#genres" onclick="showGenres()">Genres</a>
+        <a href="#search">Search</a>
+        <a href="#movies">Movies</a>
+        <a href="#tvshows">TV Shows</a>
+    </div>
+
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="searchBar" class="search-bar" placeholder="Search for movies or anime...">
+        </div>
+
+        <div class="grid-wrapper">
+
+        <div class="grid-container" id="movieGrid">
+            <!-- Movie Item Template -->
+            <div class="grid-item">
+                <img src="../img/fightclubCover.jpg" alt="Fight Club" class="poster">
+                <a href="#" class="title" target="_blank">Fight Club(1999)</a>
+            </div>
+            <div class="grid-item">
+                <img src="../img/deadpool&wolverineCover.jpg" alt="Deadpool & Wolverine" class="poster">
+                <a href="#" class="title" target="_blank">Deadpool & Wolverine(2024)</a>
+            </div>
+            <div class="grid-item">
+                <img src="../img/interstellarCover.jpg" alt="Interstellar" class="poster">
+                <a href="#" class="title" target="_blank">Interstellar (2014)</a>
+            </div>
+            <div class="grid-item">
+                <img src="../img/aotwallpaper.jpg" alt="Attack on Titan" class="poster" onclick="document.location='series/anime/attackOnTitan.html'">
+                <a href="series/anime/attackOnTitan.html" class="title" target="_blank">Attack on Titan (2013)</a>
+            </div>
+            <div class="grid-item">
+                <img src="../img/365DaysCover.jpg" alt="365 Days" class="poster">
+                <a href="#" class="title" target="_blank">365 Days(2020)</a>
+            </div>
+            <div class="grid-item">
+                <img src="https://via.placeholder.com/200x300" alt="My Hero Academia" class="poster">
+                <a href="#" class="title" target="_blank">My Hero Academia (2016)</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        // Function to show the genres dropdown
+        function showGenres() {
+            document.getElementById('genresDropdown').style.display = 'block';
+        }
+    
+        // Function to hide the genres dropdown
+        function hideGenres() {
+            document.getElementById('genresDropdown').style.display = 'none';
+        }
+    
+        // Function to toggle the sidebar for mobile view
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+    
+        // JavaScript to filter movies and anime based on the search query
+        const searchBar = document.getElementById('searchBar');
+        const movieGrid = document.getElementById('movieGrid');
+        const gridItems = movieGrid.getElementsByClassName('grid-item');
+    
+        searchBar.addEventListener('keyup', function(event) {
+            const query = event.target.value.toLowerCase();
+    
+            for (let i = 0; i < gridItems.length; i++) {
+                const title = gridItems[i].getElementsByClassName('title')[0];
+                if (title.innerHTML.toLowerCase().includes(query)) {
+                    gridItems[i].style.display = '';
+                } else {
+                    gridItems[i].style.display = 'none';
+                }
+            }
+        });
+    
+        // Initial setup for the genres dropdown visibility based on screen size
+        window.addEventListener('resize', function() {
+            if (window.innerWidth <= 600) {
+                document.getElementById('genresDropdown').style.display = 'none';
+            } else {
+                document.getElementById('genresDropdown').style.display = 'block';
+            }
+        });
+    </script>
+    
+   </body>
+   </html>

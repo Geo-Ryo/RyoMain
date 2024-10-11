@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryo | Attack On Titan</title>
+    <link rel="stylesheet" href="../../../css/attackOnTitan.css">
+    <link rel="shortcut icon" href="../../../img/WingsOfFreedom.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <ul>
+            <li>
+               <button onclick="document.location='../../../index.html'"><i class="fa fa-home"></i> Home</button>
+            </li>
+            <li>
+                <button><i class="fa fa-tv"></i> Tv Shows</button>
+            </li>
+            <li>
+                <button><i class="fa fa-film"></i> Movies</button>
+            </li>
+            <li>
+                <button><i class="fa fa-"></i> Search</button>
+            </li>
+        </ul>
+        
+        <img src="../../../img/colossaltitan.png" alt="Titan Image" class="header-image">
+    </header>
+    
+    <div class="container">
+        <aside class="left-sidebar">
+            <div class="dropdown">
+                <button class="dropbtn">Season 1</button>
+                <div class="dropdown-content">
+                    <button onclick="watch11()">Episode 1</button>
+                    <button onclick="watch12()">Episode 2</button>
+                    <!-- Add more buttons up to Episode 25 -->
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Season 2</button>
+                <div class="dropdown-content">
+                    <button onclick="watch21()">Episode 1</button>
+                    <button onclick="watch22()">Episode 2</button>
+                    <!-- Add more buttons up to Episode 12 -->
+                </div>
+            </div>
+            <!-- Add more dropdowns for Season 3, 4, 5 -->
+        </aside>
+
+        <main class="video-screen">
+            
+
+                <video id="videoPlayer" controls>
+                    <source src="" type="video/mp4">
+                    <img src="../../../img/bill.png">
+                </video>
+                
+            
+        </main>
+
+        <aside class="right-sidebar">
+            <!-- Empty sidebar -->
+        </aside>
+    </div>
+
+    <footer>
+        <div class="bottom-content">
+            <img src="../../../img/aotwallpaper.jpg" alt="Poster" class="poster-image">
+            <p class="story-text">Attack on Titan is a Japanese manga series...</p>
+        </div>
+    </footer>
+
+    <script src="../../../js/attackOnTitan.js"></script>
+</body>
+</html>

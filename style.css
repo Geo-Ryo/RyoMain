@@ -1,0 +1,127 @@
+/* Basic Reset */
+body, h1, h2, p, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: rgba(0, 0, 0, 0.171) url('img/loginwall.jpg') no-repeat center center/cover; /* Add background image */
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container Styling */
+.container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.2); /* Transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Form Container Styling */
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Headings */
+h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #065579;
+    text-align: center;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+/* Input Styling */
+input {
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #1490ca;
+    outline: none;
+}
+
+/* Button Styling */
+button {
+    padding: 15px;
+    width: 100%;
+    background-color: #1490ca;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1490ca;
+}
+
+/* Link Styling */
+p {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    margin-top: 4%;
+}
+
+a {
+    color: #1490ca;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
